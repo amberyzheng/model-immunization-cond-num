@@ -1,0 +1,31 @@
+training:
+  max_epochs: 3          
+  gpus: 1                     
+  precision: 32    
+  log_every_n_steps: 1           
+  logger:
+    project_name: "immu_cond_num"  
+  callbacks:
+    checkpoint:
+      monitor: "train_loss"   # Metric to monitor for saving checkpoints
+      mode: "min"             # Save best model with minimum train_loss
+      save_top_k: 1           # Number of best models to save
+    early_stopping:
+      monitor: "train_loss"   # Metric to monitor for stopping
+      mode: "min"             # Stop when train_loss does not improve
+      patience: 3             # Number of epochs to wait before stopping
+data:
+  dataset_name: imagenet
+  batch_size: 64              # Batch size for training and validation
+  d1_path: data/imagenet
+  d2_path: data/country211
+  d2_name: country211
+  
+model:
+  task: "classification"          # Task: "classification" or "regression"
+  feature_extractor_type: "pt_imagenet" 
+  feat_size: 512                   # Feature size of resnet
+  lambda_kappa: 1               # Regularization coefficient
+  lambda_r1: 1e-4         # Conditioning regularization coefficient
+  lambda_r2: 2e6
+  lr: 1e-5  

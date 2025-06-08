@@ -1,0 +1,25 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+
+  | Name              | Type                   | Params | Mode
+---------------------------------------------------------------------
+0 | feature_extractor | LinearFeatureExtractor | 6.3 K  | train
+  | other params      | n/a                    | 79     | n/a
+---------------------------------------------------------------------
+6.4 K     Trainable params
+0         Non-trainable params
+6.4 K     Total params
+0.026     Total estimated model params size (MB)
+2         Modules in train mode
+0         Modules in eval mode
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user.
+  warnings.warn(  # warn only once
+Epoch 26: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.41it/s, v_num=gbhb, train_loss_step=6.88e+5, train_loss_epoch=6.88e+5]      
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('r1', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('r2', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('cond_S1', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('cond_S2', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('train_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('reconstruction_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:434: It is recommended to use `self.log('regularization_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...

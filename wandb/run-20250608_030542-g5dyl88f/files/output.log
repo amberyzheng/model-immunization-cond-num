@@ -1,0 +1,44 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+
+  | Name              | Type                   | Params | Mode
+---------------------------------------------------------------------
+0 | feature_extractor | LinearFeatureExtractor | 6.3 K  | train
+  | other params      | n/a                    | 79     | n/a
+---------------------------------------------------------------------
+6.4 K     Trainable params
+0         Non-trainable params
+6.4 K     Total params
+0.026     Total estimated model params size (MB)
+2         Modules in train mode
+0         Modules in eval mode
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user.
+  warnings.warn(  # warn only once
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:106: Total length of `DataLoader` across ranks is zero. Please make sure this was your intention.
+/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:106: Total length of `CombinedLoader` across ranks is zero. Please make sure this was your intention.
+`Trainer.fit` stopped: No training batches.
+/home/zheng709/model-immunization-cond-num/utils/log.py:19: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  plt.legend()
+Traceback (most recent call last):
+  File "/home/zheng709/model-immunization-cond-num/main.py", line 87, in <module>
+    save_loss_plot(loss_values, experiment_dir)
+  File "/home/zheng709/model-immunization-cond-num/utils/log.py", line 25, in save_loss_plot
+    wandb.log({"loss_plot": wandb.Image(output_path)})
+  File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/wandb/sdk/data_types/image.py", line 264, in __init__
+    self._initialize_from_path(data_or_path)
+  File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/wandb/sdk/data_types/image.py", line 360, in _initialize_from_path
+    self._image = pil_image.open(path)
+  File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/PIL/Image.py", line 3572, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'results/tabular/regression/linear/1/loss.png'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/zheng709/model-immunization-cond-num/main.py", line 87, in <module>
+[rank0]:     save_loss_plot(loss_values, experiment_dir)
+[rank0]:   File "/home/zheng709/model-immunization-cond-num/utils/log.py", line 25, in save_loss_plot
+[rank0]:     wandb.log({"loss_plot": wandb.Image(output_path)})
+[rank0]:   File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/wandb/sdk/data_types/image.py", line 264, in __init__
+[rank0]:     self._initialize_from_path(data_or_path)
+[rank0]:   File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/wandb/sdk/data_types/image.py", line 360, in _initialize_from_path
+[rank0]:     self._image = pil_image.open(path)
+[rank0]:   File "/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/PIL/Image.py", line 3572, in open
+[rank0]:     raise UnidentifiedImageError(msg)
+[rank0]: PIL.UnidentifiedImageError: cannot identify image file 'results/tabular/regression/linear/1/loss.png'

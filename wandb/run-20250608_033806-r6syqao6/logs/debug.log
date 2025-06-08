@@ -1,0 +1,22 @@
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_setup.py:_flush():81] Configure stats pid to 877318
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_setup.py:_flush():81] Loading settings from /home/zheng709/.config/wandb/settings
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_setup.py:_flush():81] Loading settings from /home/zheng709/model-immunization-cond-num/wandb/settings
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/zheng709/model-immunization-cond-num/wandb/run-20250608_033806-r6syqao6/logs/debug.log
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/zheng709/model-immunization-cond-num/wandb/run-20250608_033806-r6syqao6/logs/debug-internal.log
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_init.py:init():831] calling init triggers
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'training': {'max_epochs': 3, 'gpus': 1, 'precision': 32, 'log_every_n_steps': 1, 'logger': {'project_name': 'immu_cond_num'}, 'callbacks': {'checkpoint': {'monitor': 'train_loss', 'mode': 'min', 'save_top_k': 1}, 'early_stopping': {'monitor': 'train_loss', 'mode': 'min', 'patience': 3}}}, 'data': {'dataset_name': 'imagenet', 'batch_size': 64, 'd1_path': 'data/imagenet', 'd2_path': 'data/cars', 'd2_name': 'cars'}, 'model': {'task': 'classification', 'feature_extractor_type': 'pt_imagenet', 'feat_size': 512, 'lambda_kappa': 1, 'lambda_r1': '5e-5', 'lambda_r2': '2e6', 'lr': '1e-5'}, '_wandb': {}}
+2025-06-08 03:38:06,726 INFO    MainThread:877318 [wandb_init.py:init():872] starting backend
+2025-06-08 03:38:06,933 INFO    MainThread:877318 [wandb_init.py:init():875] sending inform_init request
+2025-06-08 03:38:06,938 INFO    MainThread:877318 [wandb_init.py:init():883] backend started and connected
+2025-06-08 03:38:06,944 INFO    MainThread:877318 [wandb_init.py:init():956] updated telemetry
+2025-06-08 03:38:06,950 INFO    MainThread:877318 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2025-06-08 03:38:07,340 INFO    MainThread:877318 [wandb_init.py:init():1032] starting run threads in backend
+2025-06-08 03:38:07,456 INFO    MainThread:877318 [wandb_run.py:_console_start():2453] atexit reg
+2025-06-08 03:38:07,456 INFO    MainThread:877318 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-06-08 03:38:07,457 INFO    MainThread:877318 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-06-08 03:38:07,457 INFO    MainThread:877318 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-06-08 03:38:07,458 INFO    MainThread:877318 [wandb_init.py:init():1078] run started, returning control to user process
+2025-06-08 03:38:16,030 INFO    MainThread:877318 [wandb_run.py:_config_callback():1358] config_cb None None {'task': 'classification', 'feature_extractor_type': 'pt_imagenet', 'feat_size': 512, 'lambda_kappa': 1, 'lambda_r1': '5e-5', 'lambda_r2': '2e6', 'lr': '1e-5'}

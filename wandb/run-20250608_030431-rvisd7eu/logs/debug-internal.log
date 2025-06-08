@@ -1,0 +1,7 @@
+{"time":"2025-06-08T03:04:32.071856896Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20250608_030431-rvisd7eu/logs/debug-core.log"}
+{"time":"2025-06-08T03:04:32.441922556Z","level":"INFO","msg":"stream: created new stream","id":"rvisd7eu"}
+{"time":"2025-06-08T03:04:32.442061688Z","level":"INFO","msg":"stream: started","id":"rvisd7eu"}
+{"time":"2025-06-08T03:04:32.442110028Z","level":"INFO","msg":"writer: Do: started","stream_id":"rvisd7eu"}
+{"time":"2025-06-08T03:04:32.442123738Z","level":"INFO","msg":"sender: started","stream_id":"rvisd7eu"}
+{"time":"2025-06-08T03:04:32.442122258Z","level":"INFO","msg":"handler: started","stream_id":"rvisd7eu"}
+{"time":"2025-06-08T03:04:32.641800145Z","level":"INFO","msg":"Starting system monitor"}

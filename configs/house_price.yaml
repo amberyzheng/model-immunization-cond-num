@@ -1,0 +1,31 @@
+training:
+  max_epochs: 10
+  gpus: 2                     
+  precision: 32    
+  log_every_n_steps: 1           
+  logger:
+    project_name: "immu_cond_num"  
+  callbacks:
+    checkpoint:
+      monitor: "train_loss"   # Metric to monitor for saving checkpoints
+      mode: "min"             # Save best model with minimum train_loss
+      save_top_k: 1           # Number of best models to save
+    early_stopping:
+      monitor: "train_loss"   # Metric to monitor for stopping
+      mode: "min"             # Stop when train_loss does not improve
+      patience: 3             # Number of epochs to wait before stopping
+data:
+  dataset_name: "tabular"       # Name of the dataset
+  batch_size: 64              # Batch size for training and validation
+  d1_path: 'data/house_price/D1.csv'
+  d2_path: 'data/house_price/D2.csv'
+model:
+  task: "regression"          # Task: "classification" or "regression"
+  feature_extractor_type: "linear"  # Options: "linear" or "pretrained"
+  feat_size: 79                   # Flattened MNIST image size (28x28)
+  hidden_size: 79                # Number of hidden units in the classifier
+  lambda_kappa: 1             # Regularization coefficient
+  lambda_r1: 100        # Conditioning regularization coefficient
+  lambda_r2: 1e7
+  lambda_reg: 1
+  lr: 5e-3 

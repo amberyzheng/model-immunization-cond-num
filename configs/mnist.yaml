@@ -1,0 +1,29 @@
+training:
+  max_epochs: 30      
+  gpus: 1                     
+  precision: 32    
+  log_every_n_steps: 1           
+  logger:
+    project_name: "immu_cond_num"  
+  callbacks:
+    checkpoint:
+      monitor: "train_loss"   # Metric to monitor for saving checkpoints
+      mode: "min"             # Save best model with minimum train_loss
+      save_top_k: 1           # Number of best models to save
+    early_stopping:
+      monitor: "train_loss"   # Metric to monitor for stopping
+      mode: "min"             # Stop when train_loss does not improve
+      patience: 3             # Number of epochs to wait before stopping
+data:
+  dataset_name: "mnist"       # Name of the dataset
+  batch_size: 64             # Batch size for training and validation
+  max_samples_per_class: null
+model:
+  task: "classification"          # Task: "classification" or "regression"
+  feature_extractor_type: "linear"  # Options: "linear" or "pretrained"
+  feat_size: 784                   # Flattened MNIST image size (28x28)
+  hidden_size: 784                # Number of hidden units in the classifier
+  lambda_r1: 1
+  lambda_r2: 5e7
+  lambda_reg: 1e-7
+  lr: 1e-3                        # Learning rate
