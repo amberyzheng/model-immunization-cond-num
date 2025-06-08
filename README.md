@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ### Training
 
-To train a model with our proposed regularization method:
+To immunize a model with our proposed method:
 
 ```bash
 python main.py --config <config_file>.yaml [--seed <seed>] [--digit1 <digit1> --digit2 <digit2>] [--ckpt_path <path>]
