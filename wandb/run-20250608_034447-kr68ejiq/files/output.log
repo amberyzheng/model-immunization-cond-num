@@ -1,7 +1,0 @@
-GPU available: True (cuda), used: True
-TPU available: False, using: 0 TPU cores
-HPU available: False, using: 0 HPUs
-/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/pytorch_lightning/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
-  7%|█████████████                                                                                                                                                                                  | 755M/11.0G [00:38<08:45, 19.5MB/s]
-
-Detected KeyboardInterrupt, attempting graceful shutdown ...

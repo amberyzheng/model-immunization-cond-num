@@ -1,7 +1,0 @@
-{"time":"2025-06-08T03:23:01.162190995Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/zheng709/model-immunization-cond-num/wandb/run-20250608_032300-bnpfps8y/logs/debug-core.log"}
-{"time":"2025-06-08T03:23:01.418360614Z","level":"INFO","msg":"stream: created new stream","id":"bnpfps8y"}
-{"time":"2025-06-08T03:23:01.418429164Z","level":"INFO","msg":"stream: started","id":"bnpfps8y"}
-{"time":"2025-06-08T03:23:01.418433224Z","level":"INFO","msg":"handler: started","stream_id":"bnpfps8y"}
-{"time":"2025-06-08T03:23:01.418446175Z","level":"INFO","msg":"sender: started","stream_id":"bnpfps8y"}
-{"time":"2025-06-08T03:23:01.418512555Z","level":"INFO","msg":"writer: Do: started","stream_id":"bnpfps8y"}
-{"time":"2025-06-08T03:23:01.550127091Z","level":"INFO","msg":"Starting system monitor"}

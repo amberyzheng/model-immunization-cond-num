@@ -1,7 +1,0 @@
-Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/2
-LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
-/home/zheng709/miniconda3/envs/model-immu/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user.
-  warnings.warn(  # warn only once
-X1 condition: 1795161651.0645268, A1 condition: 394404313.74806696
-X2 condition: 2009611173.1950781, A2 condition: 531779644.03056484
-Immunization Gap: 1.2044300378686656
